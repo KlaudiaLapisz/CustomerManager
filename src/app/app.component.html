@@ -1,2 +1,9 @@
-<p>Customer name: {{ customer.name }}</p>
-<p>Age: {{ customer.age}}</p>
+<div class="card" style="width: 12rem;">
+    <img class="card-img-top" [src]="customer.photoUrl">
+    <div class="card-body">
+      <h5 class="card-title">Customer name: {{ customer.name }}</h5>
+      <p class="card-text">Age: {{ customer.age}}</p>
+      <p class="card-text">Is active: {{ customer.isActive }}</p>
+      <button (click)="changeIsActive()" class="btn btn-primary">Change is active</button>
+    </div>
+  </div>

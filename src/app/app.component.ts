@@ -15,5 +15,11 @@ export class AppComponent {
     name: 'Klaudia',
     age: 29,
     isActive: true,
+    photoUrl: '../assets/customer.png'
   };
+
+  changeIsActive(): void {
+    this.customer.isActive = !this.customer.isActive;
+  }
+
 }
