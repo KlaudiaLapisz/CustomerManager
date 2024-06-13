@@ -14,12 +14,14 @@ export class AppComponent {
   customer: Customer = {
     name: 'Klaudia',
     age: 29,
-    isActive: true,
-    photoUrl: '../assets/customer.png'
+    photoUrl: '../assets/customer.png',
+    city: 'Poznan',
+    categories: ['new', 'outside', 'VIP']
   };
+  isCityVisible: boolean = true;
 
-  changeIsActive(): void {
-    this.customer.isActive = !this.customer.isActive;
+  showCity(): void {
+    this.isCityVisible = !this.isCityVisible;
   }
 
 }

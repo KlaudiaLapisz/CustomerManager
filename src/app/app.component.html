@@ -3,7 +3,13 @@
     <div class="card-body">
       <h5 class="card-title">Customer name: {{ customer.name }}</h5>
       <p class="card-text">Age: {{ customer.age}}</p>
-      <p class="card-text">Is active: {{ customer.isActive }}</p>
-      <button (click)="changeIsActive()" class="btn btn-primary">Change is active</button>
+      <p *ngIf="isCityVisible; else hiddenCity" class="card-text">City: {{ customer.city }}</p>
+      <ul>
+        <li *ngFor="let category of customer.categories">{{ category }}</li>
+      </ul>
+      <ng-template #hiddenCity>
+        <p>City not visible</p>
+      </ng-template>
+      <button (click)="showCity()" class="btn btn-primary">Show city</button>
     </div>
   </div>
